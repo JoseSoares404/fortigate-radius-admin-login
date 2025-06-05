@@ -114,14 +114,14 @@ FortiGate now authenticates `jose.soares` as a remote admin using FreeRADIUS, ma
 
 ---
 
-## 🔗 Related Topics
+## 🔗 Ideas for further labs using this same setup
 - Role-based access control (RBAC)
 - 802.1X / WiFi authentication via RADIUS
-- Integrating FreeRADIUS with LDAP or Active Directory
+- Integrating FreeRADIUS with LDAP or Active Directory (this would be fun!)
 
 ---
 
 ## 📁 Repo Files
-- `users` – example RADIUS users file
+- `users` – my RADIUS users file
 - `clients.conf` – FortiGate RADIUS client config
-- `screenshots/` – screenshots of lab steps and results
+- `screenshots/` – screenshots of this lab steps and results
