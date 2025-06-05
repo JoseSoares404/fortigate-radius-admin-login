@@ -23,6 +23,15 @@ This lab is part of my **Fortinet Certified Professional (FCP)** certification p
 
 ---
 
+## 📋 Prerequisites
+- Basic knowledge of FortiGate firewall interface
+- Familiarity with Linux command line
+- Admin access to a FortiGate device
+- AlmaLinux 9 (either physical servcer or VM environment)
+- Internet access to install FreeRADIUS
+
+---
+
 ## 🛠️ Configuration Steps
 
 ### 1. Install FreeRADIUS on AlmaLinux 9
@@ -110,6 +119,25 @@ FortiGate now authenticates `jose.soares` as a remote admin using FreeRADIUS, ma
 - RADIUS user config and group mapping
 ![image](https://github.com/user-attachments/assets/ab6deb3b-bb29-439a-9589-9f9cd6520811)
 
+
+---
+
+## 🛠️ Troubleshooting Tips
+- ❌ **Can't contact RADIUS server on FortiGate?**
+  - Make sure FreeRADIUS is running (`systemctl status radiusd`)
+  - Check that port `1812/udp` is allowed in `firewalld`
+  - Confirm correct IP and shared secret in both FortiGate and `/etc/raddb/clients.conf`
+
+- ❌ **No reply from FreeRADIUS in `radiusd -X`?**
+  - Run `sudo tcpdump -i any port 1812` to confirm packet arrival
+  - Ensure client IP is allowed in `clients.conf`
+
+- ❌ **Access-Reject messages?**
+  - Make sure the username and password exist and match in `/etc/raddb/users`
+  - Check for typos in `Fortinet-Group-Name`
+
+- ❌ **Port binding errors when running `radiusd -X`?**
+  - Stop the systemd service: `sudo systemctl stop radiusd`
 
 ---
 
