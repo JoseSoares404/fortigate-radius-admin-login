@@ -122,6 +122,13 @@ FortiGate now authenticates `jose.soares` as a remote admin using FreeRADIUS, ma
 
 ---
 
+## 💡 Lessons Learned
+- FreeRADIUS debugging with `radiusd -X`
+- Proper use of `Fortinet-Group-Name` for role mapping
+- FortiGate RADIUS integration for admin logins
+
+---
+
 ## 🛠️ Troubleshooting Tips
 - ❌ **Can't contact RADIUS server on FortiGate?**
   - Make sure FreeRADIUS is running (`systemctl status radiusd`)
@@ -138,13 +145,6 @@ FortiGate now authenticates `jose.soares` as a remote admin using FreeRADIUS, ma
 
 - ❌ **Port binding errors when running `radiusd -X`?**
   - Stop the systemd service: `sudo systemctl stop radiusd`
-
----
-
-## 💡 Lessons Learned
-- FreeRADIUS debugging with `radiusd -X`
-- Proper use of `Fortinet-Group-Name` for role mapping
-- FortiGate RADIUS integration for admin logins
 
 ---
 
