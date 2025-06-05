@@ -4,6 +4,12 @@
 This lab demonstrates how to configure centralized RADIUS authentication for FortiGate admin login using a FreeRADIUS server running on AlmaLinux 9. The result is a more secure, role-based access model aligned with enterprise standards.
 ![image](https://github.com/user-attachments/assets/bc93d687-62ff-4c09-99fc-ebb99250c95c)
 
+## 🎯 Purpose of This Lab
+This lab is part of my **Fortinet Certified Professional (FCP)** certification prep. Remote Authentication is a key topic in the curriculum — and what better way to truly understand it than to build it from scratch. Rather than just memorize concepts, I wanted to gain hands-on experience by implementing FreeRADIUS, configuring FortiGate as a RADIUS client, and enabling admin login using remote credentials. This project deepened my understanding of authentication protocols, firewall admin policies, and secure network access design.
+
+![image](https://github.com/user-attachments/assets/0cadacde-1fe0-4462-bcdb-5c28d7d14e58)
+
+
 
 ---
 
